@@ -1,6 +1,24 @@
+# creating an app
+https://apps.nextcloud.com/
+go to
+https://apps.nextcloud.com/developer/apps/generate
+fill the form
+download the tar file
 
+# set debug mode
+nano /var/www/html/config/config.php
+'debug' => true,
+
+Download the compressed file that contains the generated app and extract it into your apps/ directory. 
+Afterwards the application can be enabled on the apps page.
+
+tar -xvzf app.tar.gz
+chown -R www-data:root ./bankapi
+
+service apache2 restart
+
+#validate the new app
 https://nextcloud.pragmatic.site/settings/apps
-validate the new app
 
 #adding a menu to the add file
 ./appinfo/app.php
